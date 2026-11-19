@@ -99,10 +99,52 @@ document.querySelector('#app').innerHTML = `
   </div>
 </section>
 
-    <section id="speakers" class="speakers">
-      <h2>Talare</h2>
-      <p>Möt människorna som formar framtiden.</p>
-    </section>
+    
+<section id="speakers" class="speakers">
+  <p class="section-label">MÖT EXPERTERNA</p>
+  <h2>Röster som formar framtiden</h2>
+  <p class="section-intro">
+    Inspireras av människorna bakom morgondagens idéer.
+  </p>
+
+  <div class="speaker-grid">
+    <article class="speaker-card">
+      <div class="speaker-number">01</div>
+      <h3>Elin Andersson</h3>
+      <p class="speaker-role">Framtidsforskare</p>
+      <p>Utforskar hur teknik och samhällsutveckling formar vår framtid.</p>
+    </article>
+
+    <article class="speaker-card">
+      <div class="speaker-number">02</div>
+      <h3>Marcus Lind</h3>
+      <p class="speaker-role">AI-entreprenör</p>
+      <p>Arbetar med artificiell intelligens och mänskligt samarbete.</p>
+    </article>
+
+    <article class="speaker-card">
+      <div class="speaker-number">03</div>
+      <h3>Sara Nyström</h3>
+      <p class="speaker-role">UX-designer</p>
+      <p>Skapar digitala upplevelser med människan i centrum.</p>
+    </article>
+
+    <article class="speaker-card">
+      <div class="speaker-number">04</div>
+      <h3>David Berg</h3>
+      <p class="speaker-role">Hållbarhetsstrateg</p>
+      <p>Driver innovation för en mer hållbar och cirkulär framtid.</p>
+    </article>
+
+    <article class="speaker-card">
+      <div class="speaker-number">05</div>
+      <h3>Nora Eriksson</h3>
+      <p class="speaker-role">Teknikvisionär</p>
+      <p>Inspirerar organisationer att tänka nytt kring framtidens teknik.</p>
+    </article>
+  </div>
+</section>
+
 
     <section id="tickets" class="tickets">
       <h2>Biljetter</h2>
