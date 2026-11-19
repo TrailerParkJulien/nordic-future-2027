@@ -57,6 +57,14 @@ Resultat från Lighthouse-test:
 
 ![Lighthouse Mobile](./screenshots/lighthouse-mobile.png)
 
+## HTML Validation
+
+HTML-koden har kontrollerats med W3C HTML Validator.
+
+Resultat: 0 errors.
+
+![HTML Validation](./screenshots/html-validation.png)
+
 ## AI-användning
 
 AI har använts som stöd under utvecklingen för att diskutera kodstruktur, Sass, responsiv design och tillgänglighet.

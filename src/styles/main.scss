@@ -373,18 +373,23 @@ a:focus-visible {
   }
 }
 
+
 .location-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 50px;
-  margin-top: 55px;
-  align-items: center;
+  margin-top: 0;
+  align-items: start;
 }
 
 .location-details {
   display: flex;
   flex-direction: column;
   gap: 28px;
+}
+
+.location-heading {
+  margin-bottom: 8px;
 }
 
 .location-item {
