@@ -1,5 +1,4 @@
-
-import './styles/main.scss'
+import './styles/main.scss';
 
 document.querySelector('#app').innerHTML = `
   <header class="site-header">
@@ -195,8 +194,52 @@ document.querySelector('#app').innerHTML = `
   </div>
 </section>
 
+
+<section id="location" class="location">
+  <p class="section-label">PLANERA DITT BESÖK</p>
+  <h2>Hitta hit</h2>
+
+  <div class="location-grid">
+    <div class="location-details">
+      <article>
+        <h3>Datum</h3>
+        <p>21 maj 2027</p>
+        <p>09.00–16.00</p>
+      </article>
+
+      <article>
+        <h3>Plats</h3>
+        <p>Stockholm Waterfront Congress Centre</p>
+        <p>Nils Ericsons Plan 4</p>
+        <p>111 64 Stockholm</p>
+      </article>
+
+      <article>
+        <h3>Resa hit</h3>
+        <p>
+          Lokalen ligger intill Stockholm Centralstation
+          och är lätt att nå med tåg, tunnelbana och buss.
+        </p>
+      </article>
+    </div>
+
+    <figure class="location-map">
+      <img
+        src="https://placehold.co/900x600/192630/b7f34a?text=Stockholm+Waterfront"
+        alt="Illustrativ kartbild för konferensens plats vid Stockholm Waterfront"
+        width="900"
+        height="600"
+      />
+      <figcaption>
+        Stockholm Waterfront Congress Centre, Stockholm.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+ </main>
+
   <footer class="site-footer">
     <p>&copy; 2027 Nordic Future. Alla rättigheter förbehållna.</p>
   </footer>
-`
-
+`;
