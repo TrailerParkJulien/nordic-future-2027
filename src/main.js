@@ -145,12 +145,55 @@ document.querySelector('#app').innerHTML = `
   </div>
 </section>
 
+    
+<section id="tickets" class="tickets">
+  <p class="section-label">SÄKRA DIN PLATS</p>
+  <h2>Välj din biljett</h2>
+  <p class="section-intro">
+    Bli en del av samtalet om framtidens teknik och innovation.
+  </p>
 
-    <section id="tickets" class="tickets">
-      <h2>Biljetter</h2>
-      <p>Mer information om biljetter kommer snart.</p>
-    </section>
-  </main>
+  <div class="ticket-grid">
+    <article class="ticket-card">
+      <p class="ticket-type">STARTER</p>
+      <h3>Early Bird</h3>
+      <p class="ticket-price">1 495 <span>SEK</span></p>
+      <ul>
+        <li>Tillgång till alla föreläsningar</li>
+        <li>Lunch och fika</li>
+        <li>Digitalt konferensmaterial</li>
+      </ul>
+      <a href="mailto:info@nordicfuture.example?subject=Early%20Bird"
+        class="ticket-button">Välj Early Bird</a>
+    </article>
+
+    <article class="ticket-card ticket-featured">
+      <p class="ticket-type">POPULÄRAST</p>
+      <h3>Standard</h3>
+      <p class="ticket-price">2 495 <span>SEK</span></p>
+      <ul>
+        <li>Allt som ingår i Early Bird</li>
+        <li>Plats i främre delen av salen</li>
+        <li>Inbjudan till nätverksmingel</li>
+      </ul>
+      <a href="mailto:info@nordicfuture.example?subject=Standard"
+        class="ticket-button">Välj Standard</a>
+    </article>
+
+    <article class="ticket-card">
+      <p class="ticket-type">EXKLUSIV</p>
+      <h3>VIP Experience</h3>
+      <p class="ticket-price">3 995 <span>SEK</span></p>
+      <ul>
+        <li>Allt som ingår i Standard</li>
+        <li>VIP-middag med talarna</li>
+        <li>Exklusiv workshop</li>
+      </ul>
+      <a href="mailto:info@nordicfuture.example?subject=VIP"
+        class="ticket-button">Välj VIP</a>
+    </article>
+  </div>
+</section>
 
   <footer class="site-footer">
     <p>&copy; 2027 Nordic Future. Alla rättigheter förbehållna.</p>
