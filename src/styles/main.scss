@@ -1,0 +1,254 @@
+
+/* 1. Färger och grundinställningar */
+
+$color-background: #101820;
+$color-surface: #192630;
+$color-text: #f4f5f2;
+$color-muted: #a6b2b8;
+$color-accent: #b7f34a;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: $color-background;
+  color: $color-text;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* 2. Navigering */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 8%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-logo {
+  color: $color-text;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 1px;
+
+  span {
+    color: $color-accent;
+    margin-left: 6px;
+  }
+}
+
+.main-nav {
+  display: flex;
+  gap: 28px;
+
+  a {
+    color: $color-muted;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-accent;
+    }
+  }
+}
+
+/* 3. Startsida */
+
+.hero {
+  min-height: 650px;
+  padding: 120px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-label {
+  color: $color-accent;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 20px 0;
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.95;
+  letter-spacing: -6px;
+
+  span {
+    color: $color-accent;
+  }
+}
+
+.hero-description {
+  max-width: 520px;
+  color: $color-muted;
+  font-size: 1.15rem;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 28px;
+  background: $color-accent;
+  color: $color-background;
+  border-radius: 4px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: #d0ff78;
+    transform: translateY(-3px);
+  }
+}
+
+/* 4. Övriga sektioner */
+
+.about,
+.schedule,
+.speakers,
+.tickets {
+  padding: 90px 8%;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+  }
+
+  p {
+    max-width: 650px;
+    color: $color-muted;
+  }
+}
+
+.about {
+  background: $color-surface;
+}
+
+.site-footer {
+  padding: 30px 8%;
+  color: $color-muted;
+  font-size: 0.9rem;
+}
+
+/* 5. Mobilanpassning */
+
+@media (max-width: 700px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+
+  .hero {
+    min-height: 550px;
+    padding: 80px 8%;
+  }
+
+  .hero h1 {
+    letter-spacing: -3px;
+  }
+
+  .about,
+  .schedule,
+  .speakers,
+  .tickets {
+    padding: 60px 8%;
+  }
+}
+
+/* 6. Respektera användarens rörelseinställningar */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* Konferensprogram */
+
+.section-label {
+  color: $color-accent;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.section-intro {
+  margin-bottom: 40px;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.session {
+  display: flex;
+  gap: 24px;
+  padding: 28px;
+  background: $color-background;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: $color-accent;
+  }
+
+  time {
+    color: $color-accent;
+    font-size: 1.2rem;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  h3 {
+    margin: 0 0 8px;
+  }
+
+  p {
+    margin: 6px 0;
+  }
+
+  .session-speaker {
+    color: $color-text;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 700px) {
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+}
