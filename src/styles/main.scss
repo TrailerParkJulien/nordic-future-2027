@@ -1,12 +1,40 @@
+
 /* ========================================
    1. FÄRGER OCH GRUNDINSTÄLLNINGAR
 ======================================== */
 
-$color-background: #101820;
-$color-surface: #192630;
-$color-text: #f4f5f2;
-$color-muted: #a6b2b8;
-$color-accent: #b7f34a;
+:root {
+  color-scheme: dark;
+
+  --color-background: #101820;
+  --color-surface: #192630;
+  --color-text: #f4f5f2;
+  --color-muted: #a6b2b8;
+  --color-accent: #b7f34a;
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-footer: #0b1117;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+
+    --color-background: #e8ecee;
+    --color-surface: #f3f5f5;
+    --color-text: #18232b;
+    --color-muted: #52616b;
+    --color-accent: #426b00;
+    --color-border: rgba(0, 0, 0, 0.12);
+    --color-footer: #dce2e4;
+  }
+}
+
+$color-background: var(--color-background);
+$color-surface: var(--color-surface);
+$color-text: var(--color-text);
+$color-muted: var(--color-muted);
+$color-accent: var(--color-accent);
+$color-footer: var(--color-footer);
 
 * {
   box-sizing: border-box;
@@ -44,7 +72,7 @@ a:focus-visible {
   align-items: center;
   padding: 24px 8%;
   background: $color-background;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .site-logo {
@@ -148,7 +176,7 @@ a:focus-visible {
 .speakers,
 .tickets {
   padding: 90px 8%;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-border);
 }
 
 .about h2,
@@ -191,7 +219,7 @@ a:focus-visible {
   gap: 24px;
   padding: 28px;
   background: $color-surface;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   transition:
     border-color 0.2s ease,
@@ -237,7 +265,7 @@ a:focus-visible {
 .speaker-card {
   padding: 30px;
   background: $color-surface;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   transition:
     transform 0.2s ease,
@@ -287,7 +315,7 @@ a:focus-visible {
   flex-direction: column;
   padding: 32px;
   background: $color-surface;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   transition:
     transform 0.2s ease,
@@ -373,7 +401,6 @@ a:focus-visible {
   }
 }
 
-
 .location-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
@@ -396,7 +423,7 @@ a:focus-visible {
   display: flex;
   gap: 22px;
   padding-bottom: 22px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid var(--color-border);
 
   h3 {
     margin: 0 0 8px;
@@ -436,7 +463,7 @@ a:focus-visible {
   margin: 0;
   overflow: hidden;
   background: $color-background;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--color-border);
   border-radius: 10px;
 
   img {
@@ -461,8 +488,8 @@ a:focus-visible {
 
 .site-footer {
   padding: 35px 8%;
-  background: #0b1117;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: $color-footer;
+  border-top: 1px solid var(--color-border);
   color: $color-muted;
   font-size: 0.85rem;
   text-align: center;
